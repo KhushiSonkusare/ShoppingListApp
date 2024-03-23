@@ -22,6 +22,7 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -156,6 +157,10 @@ fun ShoppingItemEditor(item: ShoppingItem, onEditComplete: (String, Int) -> Unit
     Row(modifier = Modifier
         .fillMaxWidth()
         .background(Color.White)
+        .border(
+            border = BorderStroke(2.dp, MaterialTheme.colorScheme.primary),
+            shape = RoundedCornerShape(20)
+        )
         .padding(8.dp),
         horizontalArrangement = Arrangement.SpaceEvenly
     )
